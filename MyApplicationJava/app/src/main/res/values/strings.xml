@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">My ApplicationJava</string>
+    <string name="text_first_page"> SONO BELLISSIMISIMO</string>
+    <string name="click_me"> cliccami </string>
+    <string name="username_field">username</string>
+    <string name="password_field">password</string>
+    <string name="shr_app_name"> Gets stronger</string>
+    <string name="shr_button_cancel"> delete</string>
+    <string name="welcome"> welcome</string>
+    <string name="welcome1"> You will be able to see all the main exercises to get stronger</string>
+    <string name="back"> torna indietro </string>
+    <string name="viewupper"> view upper </string>
+    <string name="view_back"> view back </string>
+    <string name="view_lower"> view lower </string>
+    <string name="navigation_drawer_open">open </string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="title_tool_bar"> menu </string>
+
+    <string name="titleUpper"> These are the main exercises. Before moving on, remember to focus on:
+- activation of the chest
+- correct breathing
+- correct execution </string>
+</resources>

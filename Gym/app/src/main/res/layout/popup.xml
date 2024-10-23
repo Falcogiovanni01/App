@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -9,25 +10,28 @@
         android:id="@+id/linkedin_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="true"
+        android:paddingBottom="8dp"
         android:text="LinkedIn"
         android:textColor="@android:color/holo_blue_dark"
-        android:paddingBottom="8dp"
-        android:clickable="true" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/github_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="true"
+        android:paddingBottom="8dp"
         android:text="GitHub"
         android:textColor="@android:color/holo_blue_dark"
-        android:paddingBottom="8dp"
-        android:clickable="true" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/instagram_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clickable="true"
         android:text="Instagram"
         android:textColor="@android:color/holo_blue_dark"
-        android:clickable="true" />
+        android:textSize="18sp" />
 </LinearLayout>

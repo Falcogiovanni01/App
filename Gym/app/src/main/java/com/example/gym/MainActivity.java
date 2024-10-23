@@ -33,11 +33,6 @@ public class MainActivity extends AppCompatActivity {
                 super.onCreate(savedInstanceState);
 //        EdgeToEdge.enable(this);
                 setContentView(R.layout.activity_main);
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-//            return insets;
-//        });
                 // next_button
                 // VOGLIOO METTERMI IN ASCOLTO SU BUTTON, DEVO USARE LE VIEW :
                 Button buttonNext = findViewById(R.id.next_button);
@@ -46,8 +41,6 @@ public class MainActivity extends AppCompatActivity {
                         // Crea un Intent per avviare WelcomeActivity
                         Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
                         startActivity(intent); // Avvia l'activity
-
-
                 });
                 /**
                  * CONTACT ME :
@@ -58,12 +51,7 @@ public class MainActivity extends AppCompatActivity {
                                 @Override
                                 public void onClick(View v) {
                                         showPopup();
-
-
-                                }
-
-
-
+                              }
                         });
 
                 // VOGLIO MONITORARE LA PASSWORD :
@@ -109,12 +97,9 @@ public class MainActivity extends AppCompatActivity {
                 return open;
         }
 
-
         /**
          * POPUP
          */
-
-
         private void showPopup() {
                 // Crea un nuovo Dialog
                 Dialog dialog = new Dialog(this);
@@ -128,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                 linkedinLink.setOnClickListener(new View.OnClickListener()  {
                         @Override
                         public void onClick(View v) {
-                                openLink("https://www.linkedin.com/feed/"); // Sostituisci con il tuo link
+                                openLink("https://www.linkedin.com/feed/");
                                 dialog.dismiss(); // Chiudi il dialog
                         }
                 });
@@ -136,8 +121,8 @@ public class MainActivity extends AppCompatActivity {
                 githubLink.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                                openLink("https://github.com/Falcogiovanni01"); // Sostituisci con il tuo link
-                                dialog.dismiss(); // Chiudi il dialog
+                                openLink("https://github.com/Falcogiovanni01");
+                                dialog.dismiss();
                         }
                 });
 

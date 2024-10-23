@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 
@@ -25,6 +26,16 @@ public class WelcomeActivity extends AppCompatActivity {
         myToolbar = findViewById(R.id.topAppBar);
         setSupportActionBar(myToolbar);
 
+
+        // Recupera l'Intent
+        Intent intent = getIntent();
+        String username = intent.getStringExtra("username_key");
+
+        // Trova il TextView per il nome utente
+        TextView usernameTextView = findViewById(R.id.username_text_view);
+
+        // Imposta il nome utente
+        usernameTextView.setText(username);
 
 
         Button buttonBack = findViewById(R.id.welcome_button_back);

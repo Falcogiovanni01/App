@@ -47,6 +47,15 @@
                     android:textSize="24sp"
                     android:textStyle="bold" />
                 <TextView
+                    android:id="@+id/username_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_blue_light" />
+
+                <TextView
                     android:id="@+id/welcome_text1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

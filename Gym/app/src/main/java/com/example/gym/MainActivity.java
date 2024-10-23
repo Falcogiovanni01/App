@@ -33,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
                 super.onCreate(savedInstanceState);
 //        EdgeToEdge.enable(this);
                 setContentView(R.layout.activity_main);
+
+                // Trova il campo di input per il nome utente
+                TextInputEditText usernameEditText = findViewById(R.id.username_edit_text); // Assicurati che l'ID corrisponda
+
+
+
                 // next_button
                 // VOGLIOO METTERMI IN ASCOLTO SU BUTTON, DEVO USARE LE VIEW :
                 Button buttonNext = findViewById(R.id.next_button);
@@ -40,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
                 buttonNext.setOnClickListener((View view) -> {
                         // Crea un Intent per avviare WelcomeActivity
                         Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
+
+                        // Aggiungi parametri all'Intent
+                        String username =  usernameEditText.getText().toString().trim(); // Sostituisci con il valore che desideri passare
+                        intent.putExtra("username_key", username);
+
                         startActivity(intent); // Avvia l'activity
                 });
                 /**

@@ -23,9 +23,8 @@
                 app:title="@string/title_tool_bar"
                 app:menu="@menu/menu"
                 android:background="@android:color/black"
-
                 app:layout_scrollFlags="scroll|enterAlways|snap"
-                 /> <!-- Aggiungi l'icona di navigazione -->
+                app:navigationIcon="@drawable/ic_action_name"  /> <!-- Aggiungi l'icona di navigazione -->
 
         </com.google.android.material.appbar.AppBarLayout>
 

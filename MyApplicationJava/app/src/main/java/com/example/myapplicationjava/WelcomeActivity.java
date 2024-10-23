@@ -73,7 +73,6 @@ public class WelcomeActivity extends AppCompatActivity {
             startActivity(intent);
 //            Intent portamiIndietro = new Intent(WelcomeActivity.this, MainActivity.class);
 //            startActivity(portamiIndietro);
-            Toast.makeText(getApplicationContext(),"Item 2 Selected", Toast.LENGTH_LONG).show();
 
             return true;
         } else if (id ==  R.id.another) {

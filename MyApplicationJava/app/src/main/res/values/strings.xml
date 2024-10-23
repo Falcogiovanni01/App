@@ -8,7 +8,7 @@
     <string name="shr_button_cancel"> delete</string>
     <string name="welcome"> welcome</string>
     <string name="welcome1"> You will be able to see all the main exercises to get stronger</string>
-    <string name="back"> torna indietro </string>
+    <string name="back">  Come back</string>
     <string name="viewupper"> view upper </string>
     <string name="view_back"> view back </string>
     <string name="view_lower"> view lower </string>
@@ -20,4 +20,7 @@
 - activation of the chest
 - correct breathing
 - correct execution </string>
+
+    <string name="Chest_Workout">Train your chest with us</string>
+
 </resources>

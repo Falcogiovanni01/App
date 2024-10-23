@@ -1,11 +1,19 @@
 package com.example.myapplicationjava;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.PopupMenu;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +21,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -36,6 +45,23 @@ public class MainActivity extends AppCompatActivity {
             // Crea un Intent per avviare WelcomeActivity
             Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
             startActivity(intent); // Avvia l'activity
+
+
+            });
+        /**
+         * CONTACT ME :
+         */
+        MaterialToolbar toolbar = findViewById(R.id.contactMe);
+        toolbar.setNavigationOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        showPopup();
+
+
+                    }
+
+
 
         });
 
@@ -81,4 +107,56 @@ public class MainActivity extends AppCompatActivity {
         }
         return open;
     }
+
+
+    /**
+     * POPUP
+     */
+
+
+    private void showPopup() {
+        // Crea un nuovo Dialog
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.popup); // Imposta il layout del dialog
+
+        // Trova le TextView e imposta i listener per i clic
+        TextView linkedinLink = dialog.findViewById(R.id.linkedin_link);
+        TextView githubLink = dialog.findViewById(R.id.github_link);
+        TextView instagramLink = dialog.findViewById(R.id.instagram_link);
+
+        linkedinLink.setOnClickListener(new View.OnClickListener()  {
+            @Override
+            public void onClick(View v) {
+                openLink("https://www.linkedin.com/feed/"); // Sostituisci con il tuo link
+                dialog.dismiss(); // Chiudi il dialog
+            }
+        });
+
+        githubLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openLink("https://github.com/Falcogiovanni01"); // Sostituisci con il tuo link
+                dialog.dismiss(); // Chiudi il dialog
+            }
+        });
+
+        instagramLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openLink("https://www.instagram.com/f.gio_/profilecard/?igsh=MXJ6MHcwaHdsZjNsZA%3D%3D"); // Sostituisci con il tuo link
+                dialog.dismiss(); // Chiudi il dialog
+            }
+        });
+
+        dialog.show(); // Mostra il dialog
+    }
+
+    private void openLink(String url) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent); // Apri il link nel browser
+    }
+
+
+
 }

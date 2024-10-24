@@ -26,17 +26,19 @@ import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
+public class MainActivity extends AppCompatActivity {
+        public static ArrayList<LoginUser> login = new ArrayList<>() ;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
-//        EdgeToEdge.enable(this);
+
                 setContentView(R.layout.activity_main);
 
                 // Trova il campo di input per il nome utente
                 TextInputEditText usernameEditText = findViewById(R.id.username_edit_text); // Assicurati che l'ID corrisponda
-
+                TextInputEditText passwordEdit = findViewById(R.id.password_edit_text);
 
 
                 // next_button
@@ -49,9 +51,32 @@ public class MainActivity extends AppCompatActivity {
 
                         // Aggiungi parametri all'Intent
                         String username =  usernameEditText.getText().toString().trim(); // Sostituisci con il valore che desideri passare
-                        intent.putExtra("username_key", username);
+                        String pass =  passwordEdit.getText().toString().trim();
 
-                        startActivity(intent); // Avvia l'activity
+                        LoginUser user = new LoginUser(username ,pass );
+                        login.add(new LoginUser("giovanni","prova1000"));
+                        login.add(new LoginUser("michele","prova1000"));
+
+                        intent.putExtra("username_key", username);
+                        // VERIFICHIAMO SE L'UTENTE ESISTE :
+                        if(login.contains(user)== true ){
+                                // entra
+                                startActivity(intent);
+                        }else {
+                                //DOVE VAI ?? non sei loggato
+                                Toast.makeText(MainActivity.this, "Credenziali non valide", Toast.LENGTH_SHORT).show();
+                        }
+
+                        // REGISTRAZIONE
+                        TextView registerLink = findViewById(R.id.register_link);
+                        registerLink.setOnClickListener((View view1)-> {
+
+                                        // Crea un Intent per avviare la RegistrationActivity
+                                        Intent intent1 = new Intent(MainActivity.this, SignUp.class);
+                                        startActivity(intent1); // Avvia l'activity di registrazione
+
+                        });
+                       // Avvia l'activity
                 });
                 /**
                  * CONTACT ME :
@@ -98,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        private boolean isPasswordValid(Editable text) {
+        public static boolean isPasswordValid(Editable text) {
                 boolean open =false ;
                 if(text.length()< 8){
                         open= false ;

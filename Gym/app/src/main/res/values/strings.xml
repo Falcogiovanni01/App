@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">My ApplicationJava</string>
     <string name="text_first_page"> SONO BELLISSIMISIMO</string>
-    <string name="click_me"> cliccami </string>
+    <string name="click_me"> login</string>
+    <string name="sign_up">sign up </string>
     <string name="username_field">username</string>
     <string name="password_field">password</string>
     <string name="shr_app_name"> Gets stronger</string>

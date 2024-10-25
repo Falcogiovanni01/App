@@ -95,6 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Non sei registrato? Registrati qui."
+            android:textSize="20dp"
             android:textColor="@android:color/holo_blue_light"
             android:clickable="true"
             android:focusable="true"
@@ -106,12 +107,12 @@
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:background="@color/red"
-
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         tools:layout_editor_absoluteX="2dp"
         tools:layout_editor_absoluteY="678dp"
         app:navigationIcon="@drawable/ic_action_name_contact"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

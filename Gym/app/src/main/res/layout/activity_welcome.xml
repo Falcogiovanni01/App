@@ -76,8 +76,30 @@
                         android:text="@string/back" />
                 </LinearLayout>
 
+<!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="347dp"
+                    android:orientation="vertical">
+
+
+                    <ListView
+                        android:id="@+id/myListViewWelcome"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="?attr/actionBarSize"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+                </LinearLayout>
+                         Fai sì che la ListView scorra sotto la Toolbar -->
+
+
+
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
+
+
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

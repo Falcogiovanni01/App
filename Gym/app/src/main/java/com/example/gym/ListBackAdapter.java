@@ -9,6 +9,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
+
 import java.util.ArrayList;
 
 public class ListBackAdapter extends BaseAdapter {
@@ -61,7 +64,33 @@ public class ListBackAdapter extends BaseAdapter {
         titleView.setText(currentItem.getTitle());
         descriptionView.setText(currentItem.getDescription());
 
+        // Gestisci il clic sull'immagine
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (context instanceof AppCompatActivity) {
+                    // Mostra il DialogFragment usando il FragmentManager dell'Activity
+                    BlankFragment blankFragment = new BlankFragment();
+                    blankFragment.show(
+                            ((AppCompatActivity) context).getSupportFragmentManager(), BlankFragment.TAG);
+                }
+            }
+        });
+
+
         return convertView;
+    }
+
+    private void openFragment() {
+        // Ottieni il FragmentManager
+        FragmentTransaction transaction = ((AppCompatActivity) context).getSupportFragmentManager().beginTransaction();
+        // Crea una nuova istanza del Fragment
+        BackFragment fragment = new BackFragment();
+        // Aggiungi il Fragment alla transazione
+        transaction.replace(R.id.fragment1, fragment);
+        transaction.addToBackStack(null); // Aggiungi al back stack per poter tornare indietro
+        // Esegui la transazione
+        transaction.commit();
     }
 
 }

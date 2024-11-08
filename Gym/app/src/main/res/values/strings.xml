@@ -30,6 +30,8 @@
     <string name="PulleyDescription">Il Pulley </string>
     <string name="T_bar">T Bar</string>
     <string name="TBarDescription">La T-Bar Row è un esercizio mirato principalmente a</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

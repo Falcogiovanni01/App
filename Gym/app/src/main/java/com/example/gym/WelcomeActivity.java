@@ -9,11 +9,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.gym.R;
+
+import java.util.ArrayList;
 
 public class WelcomeActivity extends AppCompatActivity {
     private Toolbar myToolbar; // Dichiarazione della Toolbar
@@ -43,29 +46,24 @@ public class WelcomeActivity extends AppCompatActivity {
             Intent portamiIndietro = new Intent(WelcomeActivity.this, MainActivity.class);
             startActivity(portamiIndietro);
         });
-//        @Override
-//        menu.setNavigationOnClickListener{
-//            // QUANDO VIENE CLICCATA L'ICONA
-//        }
-//
-//        @Override
-//        menu.setOnMenuItemClickListener{
-//            menuItem ->{
-//               if(menuItem.itemId ==   R.id.viewAnimal){
-//
-//                        true
-//                    }
-//                if(menuItem.itemId ==   R.id.another){
-//                        true
-//                    }
-//                    else{
-//                        false
-//                    }
-//
-//                }
-//            }
-//        }
 
+        // facciamo apparire allenati e dieta , da li apriamo due fragment che fanno qualcosa :
+//        ListView listView = findViewById(R.id.myListViewWelcome);
+//
+//        ArrayList<listBack> item = new ArrayList<>();
+//
+//        // ora aggiungo gli elementi
+//        item.add(new listBack(getDrawable(R.drawable.allenati_con_noi), " Allenati con noi ", ""));
+//
+//        item.add(new listBack(getDrawable(R.drawable.dieta), " dieta bilanciata adatta per te", ""));
+//
+//
+//        // Crea l'adapter e passagli la lista
+//        ListBackAdapter adapter = new ListBackAdapter(this, item);
+//
+//        // Imposta l'adapter sulla ListView
+//        listView.setAdapter(adapter);
+//
 
     }
 

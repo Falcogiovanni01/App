@@ -23,5 +23,13 @@
 - correct execution </string>
 
     <string name="Chest_Workout">Train your chest with us</string>
+    <string name="LatMachinT"> Lat Machine</string>
+    <string name="LatMachinDescription">La Lat Machine .</string>
+
+    <string name="PulleyT">Pulley</string>
+    <string name="PulleyDescription">Il Pulley </string>
+    <string name="T_bar">T Bar</string>
+    <string name="TBarDescription">La T-Bar Row è un esercizio mirato principalmente a</string>
+
 
 </resources>

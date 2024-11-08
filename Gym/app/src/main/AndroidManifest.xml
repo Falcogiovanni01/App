@@ -30,6 +30,9 @@
         <activity android:name=".SignUp">
 
         </activity>
+        <activity android:name=".BackActivity">
+
+        </activity>
 
 
 

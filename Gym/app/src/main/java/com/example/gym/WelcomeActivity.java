@@ -90,9 +90,12 @@ public class WelcomeActivity extends AppCompatActivity {
             return true;
         } else if (id ==  R.id.another) {
 
-            Toast.makeText(getApplicationContext(),"Item 2 Selected", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(WelcomeActivity.this, BackActivity.class);
+            startActivity(intent);
+
             return true;
         } else if(id == R.id.viewlower){
+            Toast.makeText(getApplicationContext(),"Item 2 Selected", Toast.LENGTH_LONG).show();
             return true ;
         }
         else{
